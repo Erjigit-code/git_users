@@ -5,7 +5,7 @@ class ConnectivityService {
 
   Future<bool> checkConnectivity() async {
     var connectivityResult = await _connectivity.checkConnectivity();
-    print("Connectivity result: $connectivityResult"); // Лог для диагностики
+    print("Connectivity result: $connectivityResult");
     if (connectivityResult == ConnectivityResult.none) {
       return false;
     }
