@@ -1,4 +1,5 @@
 # Miscellaneous
+kluch.env
 *.class
 *.log
 *.pyc
