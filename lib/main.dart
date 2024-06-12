@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:t_z_rabota/blocs/user_bloc.dart';
 import 'package:t_z_rabota/blocs/user_event.dart';
 import 'package:t_z_rabota/generated/codegen_loader.g.dart';
@@ -12,6 +13,7 @@ import 'package:t_z_rabota/screens/user_list_screen.dart';
 import 'package:t_z_rabota/service/connectivity_service.dart';
 
 Future<void> main() async {
+  await dotenv.load(fileName: "kluch.env");
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   SystemChrome.setPreferredOrientations([

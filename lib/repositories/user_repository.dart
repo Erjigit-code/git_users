@@ -1,13 +1,14 @@
 // user_repository.dart
 import 'package:dio/dio.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class UserRepository {
   final Dio _dio = Dio();
   final String _url = 'https://api.github.com/users';
-  final String _token = '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';
 
   UserRepository() {
-    _dio.options.headers['Authorization'] = 'token $_token';
+    _dio.options.headers['Authorization'] =
+        'token ${dotenv.env['GITHUB_TOKEN']}';
   }
 
   Future<List<dynamic>> fetchUsers() async {
