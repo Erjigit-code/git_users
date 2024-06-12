@@ -33,6 +33,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
             textColor: Colors.white,
             fontSize: 16.0,
           );
+          print(e);
         }
         emit(UserError(LocaleKeys.Error_while_receiving_data.tr()));
       }

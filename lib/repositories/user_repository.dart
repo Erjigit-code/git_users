@@ -4,7 +4,7 @@ import 'package:dio/dio.dart';
 class UserRepository {
   final Dio _dio = Dio();
   final String _url = 'https://api.github.com/users';
-  final String _token = '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';
+  final String _token = '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';
 
   UserRepository() {
     _dio.options.headers['Authorization'] = 'token $_token';
